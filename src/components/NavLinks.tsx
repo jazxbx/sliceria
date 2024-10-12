@@ -6,12 +6,12 @@ export default function NavLinks() {
       <ul className='flex flex-col justify-evenly gap-8 md:flex-row'>
         <li>
           <a href='/about' className='hover:text-yellow-400'>
-            our pizzas
+            menu
           </a>
         </li>
         <li>
           <a href='/menu' className='hover:text-yellow-400'>
-            menu
+            our story
           </a>
         </li>
         <li>
