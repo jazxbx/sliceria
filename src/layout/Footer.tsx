@@ -7,8 +7,7 @@ const infoSections = [
   },
   {
     title: 'Hours',
-    details:
-      'Monday Closed | Tuesday, Wednesday, Thursday, Friday, Saturday, 10am-9pm | Sunday 10am-8pm',
+    details: 'Wednesday - Sunday 10am - 9pm',
   },
   {
     title: 'Contact Us',
@@ -19,11 +18,11 @@ const infoSections = [
 export default function Footer() {
   return (
     <>
-      <div className='bg-yellow-400 p-7'>
+      <div className='bg-yellow p-7'>
         <div className='flex flex-col gap-10 text-sm text-center md:flex-row md:justify-center md:gap-16 md:text-lg md:text-left md:py-12'>
           {infoSections.map((section, index) => (
             <div className='md:w-80' key={index}>
-              <div className='text-xl font-bold'>{section.title}</div>
+              <div className='uppercase text-xl font-bold'>{section.title}</div>
               <div>{section.details}</div>
             </div>
           ))}
