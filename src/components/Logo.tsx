@@ -1,8 +1,8 @@
+import { Link } from '@tanstack/react-router';
 export default function Logo() {
-  //TODO: make this a link to home. ADD image tag
   return (
     <div>
-      <a href='/home'>Logo Here</a>
+      <Link to='/'>Logo Here</Link>
     </div>
   );
 }
