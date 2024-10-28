@@ -28,7 +28,7 @@ export default function Footer() {
           ))}
         </div>
       </div>
-      <div className='w-full text-center'>
+      <div className='w-full text-center bg-yellow'>
         © 2024, cheesuscrust. All Rights Reserved.
       </div>
     </>
