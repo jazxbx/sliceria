@@ -7,7 +7,6 @@ export default {
         yellow: '#FACC14',
         orange: '#D55E06',
         brown: '#251804',
-        red: '#EB2C1E',
         cream: '#F9EDCD',
         green: '#8D8E6A',
       },
