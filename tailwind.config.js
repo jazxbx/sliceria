@@ -3,6 +3,9 @@ export default {
   content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
   theme: {
     extend: {
+      fontFamily: {
+        jua: ['Jua', 'sans-serif'],
+      },
       colors: {
         yellow: '#FACC14',
         orange: '#D55E06',
