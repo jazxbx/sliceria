@@ -17,20 +17,15 @@ const infoSections = [
 
 export default function Footer() {
   return (
-    <>
-      <div className='bg-yellow p-7'>
-        <div className='flex flex-col gap-10 text-sm text-center md:flex-row md:justify-center md:gap-16 md:text-lg md:text-left md:py-12'>
-          {infoSections.map((section, index) => (
-            <div className='md:w-80' key={index}>
-              <div className='uppercase text-xl font-bold'>{section.title}</div>
-              <div>{section.details}</div>
-            </div>
-          ))}
-        </div>
+    <div className='bg-brown p-7'>
+      <div className='flex flex-col gap-10 text-sm text-center md:flex-row md:justify-center md:gap-16 md:text-lg md:text-left md:py-12'>
+        {infoSections.map((section, index) => (
+          <div className='pr-9 pl-9 md:w-80 text-yellow' key={index}>
+            <div className='uppercase text-xl font-bold'>{section.title}</div>
+            <div>{section.details}</div>
+          </div>
+        ))}
       </div>
-      <div className='w-full text-center bg-yellow'>
-        © 2024, cheesuscrust. All Rights Reserved.
-      </div>
-    </>
+    </div>
   );
 }
