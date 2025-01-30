@@ -1,6 +1,11 @@
 import video from '../assets/hero-vid.mp4';
 import pizza from '../assets/about2.jpg';
-import about2 from '../assets/meg-jenson-d0SJnuNNeIM-unsplash.jpg';
+import Marquee from '../components/Marquee';
+
+// TODO: add lazy loading to imgs
+//TODO: Add button order here page which will show maps and nav to /store
+
+const MARQUEETEXT = ['Pizza is always the answer ', '☻'];
 
 // Hero Section component
 const HeroSection = ({ video }: { video: string }) => (
@@ -23,24 +28,29 @@ const HeroSection = ({ video }: { video: string }) => (
   </section>
 );
 
-// Text Section component
-const TextSection = ({ text }: { text: string }) => (
+// Marquee Section component
+const MarqueeSection = () => (
   <section id='text' className='bg-yellow'>
-    <p className='text-brown text-xl md:text-4xl p-10 text-center uppercase text-wrap'>
-      {text}
-    </p>
+    <Marquee>
+      {MARQUEETEXT.map((text) => (
+        <p
+          className='text-brown text-xl md:text-4xl p-10 text-center uppercase'
+          key={text}
+        >
+          {text}
+        </p>
+      ))}
+    </Marquee>
   </section>
 );
 
 // About Section Component
 const AboutSection = ({
   imgSrc,
-  imgAlt,
   heading,
   description,
 }: {
   imgSrc: string;
-  imgAlt: string;
   heading: string;
   description: string;
 }) => (
@@ -65,6 +75,7 @@ const AboutSection = ({
         <img className='' src={imgSrc} alt='' />
       </div>
     </div>
+    {/* Marquee */}
   </section>
 );
 
@@ -76,10 +87,9 @@ export default function Home() {
   return (
     <main>
       <HeroSection video={video} />
-      <TextSection text='Pizza is always the answer ☻' />
+      <MarqueeSection />
       <AboutSection
         imgSrc={pizza}
-        imgAlt='Cheesus Crust'
         heading='pizza — it’s good mood food'
         description={aboutDescription}
       />
