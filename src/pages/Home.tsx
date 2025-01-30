@@ -1,8 +1,8 @@
 import video from '../assets/hero-vid.mp4';
 import pizza from '../assets/about2.jpg';
+import hpizza from '../assets/premium_photo-1679924471091-f7cd7ad90ddf.avif';
 import Marquee from '../components/Marquee';
 
-// TODO: add lazy loading to imgs
 //TODO: Add button order here page which will show maps and nav to /store
 
 const MARQUEETEXT = ['Pizza is always the answer ', '☻'];
@@ -47,10 +47,12 @@ const MarqueeSection = () => (
 // About Section Component
 const AboutSection = ({
   imgSrc,
+  imgSrc2,
   heading,
   description,
 }: {
   imgSrc: string;
+  imgSrc2: string;
   heading: string;
   description: string;
 }) => (
@@ -59,23 +61,23 @@ const AboutSection = ({
     className=' bg-orange flex flex-col md:flex-row gap-5 px-7 md:px-48 py-14 text-cream '
   >
     {/* right */}
-    {/* TODO: where to add border? which div */}
     <div className='hidden md:block'>
-      <img className='rotate-180' src={imgSrc} alt='' />
+      <img
+        className='rotate-180 border-2 border-black'
+        src={imgSrc}
+        alt='pizza'
+        loading='lazy'
+      />
     </div>
     {/* left */}
     <div className='flex flex-col gap-7 items-center md:mt-7'>
-      <h2 className='uppercase text-6xl relative right-16'>{heading}</h2>
+      <h2 className='uppercase text-6xl md:relative md:right-16'>{heading}</h2>
       <p className='text-2xl md:text-xl'>{description}</p>
       {/* picture here */}
-      <div
-        className='max-w-56 w-full border-2 border-black
-        '
-      >
-        <img className='' src={imgSrc} alt='' />
+      <div className='max-w-lg w-full border-2 border-black'>
+        <img src={imgSrc2} alt='pizza' loading='lazy' />
       </div>
     </div>
-    {/* Marquee */}
   </section>
 );
 
@@ -90,6 +92,7 @@ export default function Home() {
       <MarqueeSection />
       <AboutSection
         imgSrc={pizza}
+        imgSrc2={hpizza}
         heading='pizza — it’s good mood food'
         description={aboutDescription}
       />
