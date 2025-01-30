@@ -1,0 +1,80 @@
+{
+  "restaurant": {
+    "name": "Sliceria",
+    "location": "123 Pizza Street, Foodville",
+    "contact": {
+      "phone": "+1-234-567-8900",
+      "email": "contact@sliceria.com"
+    },
+    "hours": {
+      "monday": "11:00 AM - 10:00 PM",
+      "tuesday": "11:00 AM - 10:00 PM",
+      "wednesday": "11:00 AM - 10:00 PM",
+      "thursday": "11:00 AM - 10:00 PM",
+      "friday": "11:00 AM - 11:00 PM",
+      "saturday": "12:00 PM - 11:00 PM",
+      "sunday": "12:00 PM - 9:00 PM"
+    }
+  },
+  "menu": {
+    "categories": [
+      {
+        "name": "Standard Pizza",
+        "items": [
+          {
+            "id": 1,
+            "name": "Margherita",
+            "description": "Classic tomato sauce, mozzarella, fresh basil",
+            "price": 12.99
+          },
+          {
+            "id": 2,
+            "name": "Pepperoni",
+            "description": "Tomato sauce, mozzarella, pepperoni",
+            "price": 14.99
+          },
+          {
+            "id": 3,
+            "name": "BBQ Chicken",
+            "description": "BBQ sauce, grilled chicken, red onions, mozzarella",
+            "price": 15.99
+          }
+        ]
+      },
+      {
+        "name": "Vegan Pizza",
+        "items": [
+          {
+            "id": 4,
+            "name": "Vegan Margherita",
+            "description": "Tomato sauce, dairy-free cheese, fresh basil",
+            "price": 13.99
+          },
+          {
+            "id": 5,
+            "name": "Spicy Vegan",
+            "description": "Tomato sauce, vegan cheese, jalapeños, bell peppers, olives",
+            "price": 14.99
+          }
+        ]
+      },
+      {
+        "name": "Gluten-Free Pizza",
+        "items": [
+          {
+            "id": 6,
+            "name": "GF Veggie Supreme",
+            "description": "Gluten-free crust, tomato sauce, mozzarella, mushrooms, onions, bell peppers",
+            "price": 16.99
+          },
+          {
+            "id": 7,
+            "name": "GF Meat Lovers",
+            "description": "Gluten-free crust, tomato sauce, mozzarella, pepperoni, sausage, bacon",
+            "price": 18.99
+          }
+        ]
+      }
+    ]
+  }
+}
