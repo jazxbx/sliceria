@@ -1,18 +1,13 @@
 {
   "restaurant": {
     "name": "Sliceria",
-    "location": "123 Pizza Street, Foodville",
+    "location": "4639 Owagner Lane, Seattle, WA",
     "contact": {
-      "phone": "+1-234-567-8900",
+      "phone": "206-298-6633",
       "email": "contact@sliceria.com"
     },
     "hours": {
-      "monday": "11:00 AM - 10:00 PM",
-      "tuesday": "11:00 AM - 10:00 PM",
-      "wednesday": "11:00 AM - 10:00 PM",
-      "thursday": "11:00 AM - 10:00 PM",
-      "friday": "11:00 AM - 11:00 PM",
-      "saturday": "12:00 PM - 11:00 PM",
+      "tuesday- saturday": "11:00 AM - 10:00 PM",
       "sunday": "12:00 PM - 9:00 PM"
     }
   },
@@ -23,36 +18,41 @@
         "items": [
           {
             "id": 1,
-            "name": "Margherita",
+            "name": "Miss Margherita",
+            "img": "https://res.cloudinary.com/djlmzd7va/image/upload/v1738287141/kk_aqp6wg.jpg",
             "description": "Classic tomato sauce, mozzarella, fresh basil",
             "price": 12.99
           },
           {
             "id": 2,
             "name": "Pepperoni",
+            "img": "https://res.cloudinary.com/djlmzd7va/image/upload/v1738286915/wormpoo_10_images_of_pizzas_with_diffent_toppings._Image_taken__c00cb624-4d2a-45a5-98dc-b3bf762e0091_3_mijowg.jpg",
             "description": "Tomato sauce, mozzarella, pepperoni",
             "price": 14.99
           },
           {
             "id": 3,
             "name": "BBQ Chicken",
+            "img": "https://res.cloudinary.com/djlmzd7va/image/upload/v1738286915/wormpoo_10_images_of_pizzas_with_diffent_toppings._Image_taken__c00cb624-4d2a-45a5-98dc-b3bf762e0091_6_nrrfiv.jpg",
             "description": "BBQ sauce, grilled chicken, red onions, mozzarella",
             "price": 15.99
           }
         ]
       },
       {
-        "name": "Vegan Pizza",
+        "name": "Veggie Special Pizza",
         "items": [
           {
             "id": 4,
-            "name": "Vegan Margherita",
+            "name": "Veggie Special",
+            "img": "https://res.cloudinary.com/djlmzd7va/image/upload/v1738286915/wormpoo_10_images_of_pizzas_with_diffent_toppings._Image_taken__c00cb624-4d2a-45a5-98dc-b3bf762e0091_2_eruh3t.jpg",
             "description": "Tomato sauce, dairy-free cheese, fresh basil",
             "price": 13.99
           },
           {
             "id": 5,
             "name": "Spicy Vegan",
+            "img": "https://res.cloudinary.com/djlmzd7va/image/upload/v1738285709/Wwormpoo_10_images_of_pizzas_with_diffent_toppings._Image_taken__c00cb624-4d2a-45a5-98dc-b3bf762e0091_4_cdsaez.jpg",
             "description": "Tomato sauce, vegan cheese, jalapeños, bell peppers, olives",
             "price": 14.99
           }
@@ -63,14 +63,16 @@
         "items": [
           {
             "id": 6,
-            "name": "GF Veggie Supreme",
+            "name": "GF Supreme",
+            "img": "https://res.cloudinary.com/djlmzd7va/image/upload/v1738286915/wormpoo_10_images_of_pizzas_with_diffent_toppings._Image_taken__c00cb624-4d2a-45a5-98dc-b3bf762e0091_hs9tgj.jpg",
             "description": "Gluten-free crust, tomato sauce, mozzarella, mushrooms, onions, bell peppers",
             "price": 16.99
           },
           {
             "id": 7,
             "name": "GF Meat Lovers",
-            "description": "Gluten-free crust, tomato sauce, mozzarella, pepperoni, sausage, bacon",
+            "img": "https://res.cloudinary.com/djlmzd7va/image/upload/v1738286916/wormpoo_10_images_of_pizzas_with_diffent_toppings._Image_taken__cbd207ab-af4f-4e3d-b717-a2a7e539f236_g2mu8a.jpg",
+            "description": "Gluten-free crust, tomato sauce, mozzarella, ham, sausage, bacon",
             "price": 18.99
           }
         ]
