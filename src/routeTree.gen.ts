@@ -11,18 +11,12 @@
 // Import Routes
 
 import { Route as rootRoute } from './routes/__root'
-import { Route as OrderImport } from './routes/order'
 import { Route as MenuImport } from './routes/menu'
 import { Route as ContactImport } from './routes/contact'
 import { Route as AboutImport } from './routes/about'
 import { Route as IndexImport } from './routes/index'
 
 // Create/Update Routes
-
-const OrderRoute = OrderImport.update({
-  path: '/order',
-  getParentRoute: () => rootRoute,
-} as any)
 
 const MenuRoute = MenuImport.update({
   path: '/menu',
@@ -76,13 +70,6 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof MenuImport
       parentRoute: typeof rootRoute
     }
-    '/order': {
-      id: '/order'
-      path: '/order'
-      fullPath: '/order'
-      preLoaderRoute: typeof OrderImport
-      parentRoute: typeof rootRoute
-    }
   }
 }
 
@@ -93,7 +80,6 @@ export interface FileRoutesByFullPath {
   '/about': typeof AboutRoute
   '/contact': typeof ContactRoute
   '/menu': typeof MenuRoute
-  '/order': typeof OrderRoute
 }
 
 export interface FileRoutesByTo {
@@ -101,7 +87,6 @@ export interface FileRoutesByTo {
   '/about': typeof AboutRoute
   '/contact': typeof ContactRoute
   '/menu': typeof MenuRoute
-  '/order': typeof OrderRoute
 }
 
 export interface FileRoutesById {
@@ -110,15 +95,14 @@ export interface FileRoutesById {
   '/about': typeof AboutRoute
   '/contact': typeof ContactRoute
   '/menu': typeof MenuRoute
-  '/order': typeof OrderRoute
 }
 
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/about' | '/contact' | '/menu' | '/order'
+  fullPaths: '/' | '/about' | '/contact' | '/menu'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/about' | '/contact' | '/menu' | '/order'
-  id: '__root__' | '/' | '/about' | '/contact' | '/menu' | '/order'
+  to: '/' | '/about' | '/contact' | '/menu'
+  id: '__root__' | '/' | '/about' | '/contact' | '/menu'
   fileRoutesById: FileRoutesById
 }
 
@@ -127,7 +111,6 @@ export interface RootRouteChildren {
   AboutRoute: typeof AboutRoute
   ContactRoute: typeof ContactRoute
   MenuRoute: typeof MenuRoute
-  OrderRoute: typeof OrderRoute
 }
 
 const rootRouteChildren: RootRouteChildren = {
@@ -135,7 +118,6 @@ const rootRouteChildren: RootRouteChildren = {
   AboutRoute: AboutRoute,
   ContactRoute: ContactRoute,
   MenuRoute: MenuRoute,
-  OrderRoute: OrderRoute,
 }
 
 export const routeTree = rootRoute
@@ -153,8 +135,7 @@ export const routeTree = rootRoute
         "/",
         "/about",
         "/contact",
-        "/menu",
-        "/order"
+        "/menu"
       ]
     },
     "/": {
@@ -168,9 +149,6 @@ export const routeTree = rootRoute
     },
     "/menu": {
       "filePath": "menu.tsx"
-    },
-    "/order": {
-      "filePath": "order.tsx"
     }
   }
 }
