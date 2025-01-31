@@ -1,6 +1,7 @@
 import video from '../assets/hero-vid.mp4';
 import pizza from '../assets/about2.jpg';
 import hpizza from '../assets/premium_photo-1679924471091-f7cd7ad90ddf.avif';
+import poster from '../assets/hero.jpg';
 import Marquee from '../components/Marquee';
 
 const MARQUEETEXT = ['Pizza is always the answer ', '☻'];
@@ -16,6 +17,7 @@ const HeroSection = ({ video }: { video: string }) => (
       autoPlay
       loop
       playsInline
+      poster={poster}
       className='absolute object-cover top-0 left-0 w-screen h-screen '
     >
       <source src={video} type='video/mp4' />
