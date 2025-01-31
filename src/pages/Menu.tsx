@@ -3,8 +3,8 @@ import data from '../data/data.json';
 
 export default function Menu() {
   return (
-    <div className='bg-brown flex flex-col items-center p-5 md:p-14'>
-      <h1 className='text-5xl md:text-7xl font-bold text-orange'>OUR MENU</h1>
+    <div className='bg-orange flex flex-col items-center p-5 md:p-14'>
+      <h1 className='text-5xl md:text-7xl font-bold text-cream'>OUR MENU</h1>
       <div className='grid md:grid-cols-3 lg:grid-cols-4 gap-4 mt-9'>
         {/* Loop through items in each category */}
         {data.menu.categories.map((category) =>
