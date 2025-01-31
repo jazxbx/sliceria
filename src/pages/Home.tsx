@@ -3,8 +3,6 @@ import pizza from '../assets/about2.jpg';
 import hpizza from '../assets/premium_photo-1679924471091-f7cd7ad90ddf.avif';
 import Marquee from '../components/Marquee';
 
-//TODO: Add button order here page which will show maps and nav to /store
-
 const MARQUEETEXT = ['Pizza is always the answer ', '☻'];
 
 // Hero Section component
