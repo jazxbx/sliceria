@@ -11,30 +11,30 @@
 // Import Routes
 
 import { Route as rootRoute } from './routes/__root'
-import { Route as MenuImport } from './routes/menu'
-import { Route as ContactImport } from './routes/contact'
-import { Route as AboutImport } from './routes/about'
-import { Route as IndexImport } from './routes/index'
+import { Route as SliceriaIndexImport } from './routes/sliceria/index'
+import { Route as SliceriaMenuImport } from './routes/sliceria/menu'
+import { Route as SliceriaContactImport } from './routes/sliceria/contact'
+import { Route as SliceriaAboutImport } from './routes/sliceria/about'
 
 // Create/Update Routes
 
-const MenuRoute = MenuImport.update({
-  path: '/menu',
+const SliceriaIndexRoute = SliceriaIndexImport.update({
+  path: '/sliceria/',
   getParentRoute: () => rootRoute,
 } as any)
 
-const ContactRoute = ContactImport.update({
-  path: '/contact',
+const SliceriaMenuRoute = SliceriaMenuImport.update({
+  path: '/sliceria/menu',
   getParentRoute: () => rootRoute,
 } as any)
 
-const AboutRoute = AboutImport.update({
-  path: '/about',
+const SliceriaContactRoute = SliceriaContactImport.update({
+  path: '/sliceria/contact',
   getParentRoute: () => rootRoute,
 } as any)
 
-const IndexRoute = IndexImport.update({
-  path: '/',
+const SliceriaAboutRoute = SliceriaAboutImport.update({
+  path: '/sliceria/about',
   getParentRoute: () => rootRoute,
 } as any)
 
@@ -42,32 +42,32 @@ const IndexRoute = IndexImport.update({
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
-    '/': {
-      id: '/'
-      path: '/'
-      fullPath: '/'
-      preLoaderRoute: typeof IndexImport
+    '/sliceria/about': {
+      id: '/sliceria/about'
+      path: '/sliceria/about'
+      fullPath: '/sliceria/about'
+      preLoaderRoute: typeof SliceriaAboutImport
       parentRoute: typeof rootRoute
     }
-    '/about': {
-      id: '/about'
-      path: '/about'
-      fullPath: '/about'
-      preLoaderRoute: typeof AboutImport
+    '/sliceria/contact': {
+      id: '/sliceria/contact'
+      path: '/sliceria/contact'
+      fullPath: '/sliceria/contact'
+      preLoaderRoute: typeof SliceriaContactImport
       parentRoute: typeof rootRoute
     }
-    '/contact': {
-      id: '/contact'
-      path: '/contact'
-      fullPath: '/contact'
-      preLoaderRoute: typeof ContactImport
+    '/sliceria/menu': {
+      id: '/sliceria/menu'
+      path: '/sliceria/menu'
+      fullPath: '/sliceria/menu'
+      preLoaderRoute: typeof SliceriaMenuImport
       parentRoute: typeof rootRoute
     }
-    '/menu': {
-      id: '/menu'
-      path: '/menu'
-      fullPath: '/menu'
-      preLoaderRoute: typeof MenuImport
+    '/sliceria/': {
+      id: '/sliceria/'
+      path: '/sliceria'
+      fullPath: '/sliceria'
+      preLoaderRoute: typeof SliceriaIndexImport
       parentRoute: typeof rootRoute
     }
   }
@@ -76,48 +76,57 @@ declare module '@tanstack/react-router' {
 // Create and export the route tree
 
 export interface FileRoutesByFullPath {
-  '/': typeof IndexRoute
-  '/about': typeof AboutRoute
-  '/contact': typeof ContactRoute
-  '/menu': typeof MenuRoute
+  '/sliceria/about': typeof SliceriaAboutRoute
+  '/sliceria/contact': typeof SliceriaContactRoute
+  '/sliceria/menu': typeof SliceriaMenuRoute
+  '/sliceria': typeof SliceriaIndexRoute
 }
 
 export interface FileRoutesByTo {
-  '/': typeof IndexRoute
-  '/about': typeof AboutRoute
-  '/contact': typeof ContactRoute
-  '/menu': typeof MenuRoute
+  '/sliceria/about': typeof SliceriaAboutRoute
+  '/sliceria/contact': typeof SliceriaContactRoute
+  '/sliceria/menu': typeof SliceriaMenuRoute
+  '/sliceria': typeof SliceriaIndexRoute
 }
 
 export interface FileRoutesById {
   __root__: typeof rootRoute
-  '/': typeof IndexRoute
-  '/about': typeof AboutRoute
-  '/contact': typeof ContactRoute
-  '/menu': typeof MenuRoute
+  '/sliceria/about': typeof SliceriaAboutRoute
+  '/sliceria/contact': typeof SliceriaContactRoute
+  '/sliceria/menu': typeof SliceriaMenuRoute
+  '/sliceria/': typeof SliceriaIndexRoute
 }
 
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/about' | '/contact' | '/menu'
+  fullPaths:
+    | '/sliceria/about'
+    | '/sliceria/contact'
+    | '/sliceria/menu'
+    | '/sliceria'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/about' | '/contact' | '/menu'
-  id: '__root__' | '/' | '/about' | '/contact' | '/menu'
+  to: '/sliceria/about' | '/sliceria/contact' | '/sliceria/menu' | '/sliceria'
+  id:
+    | '__root__'
+    | '/sliceria/about'
+    | '/sliceria/contact'
+    | '/sliceria/menu'
+    | '/sliceria/'
   fileRoutesById: FileRoutesById
 }
 
 export interface RootRouteChildren {
-  IndexRoute: typeof IndexRoute
-  AboutRoute: typeof AboutRoute
-  ContactRoute: typeof ContactRoute
-  MenuRoute: typeof MenuRoute
+  SliceriaAboutRoute: typeof SliceriaAboutRoute
+  SliceriaContactRoute: typeof SliceriaContactRoute
+  SliceriaMenuRoute: typeof SliceriaMenuRoute
+  SliceriaIndexRoute: typeof SliceriaIndexRoute
 }
 
 const rootRouteChildren: RootRouteChildren = {
-  IndexRoute: IndexRoute,
-  AboutRoute: AboutRoute,
-  ContactRoute: ContactRoute,
-  MenuRoute: MenuRoute,
+  SliceriaAboutRoute: SliceriaAboutRoute,
+  SliceriaContactRoute: SliceriaContactRoute,
+  SliceriaMenuRoute: SliceriaMenuRoute,
+  SliceriaIndexRoute: SliceriaIndexRoute,
 }
 
 export const routeTree = rootRoute
@@ -132,23 +141,23 @@ export const routeTree = rootRoute
     "__root__": {
       "filePath": "__root.tsx",
       "children": [
-        "/",
-        "/about",
-        "/contact",
-        "/menu"
+        "/sliceria/about",
+        "/sliceria/contact",
+        "/sliceria/menu",
+        "/sliceria/"
       ]
     },
-    "/": {
-      "filePath": "index.tsx"
+    "/sliceria/about": {
+      "filePath": "sliceria/about.tsx"
     },
-    "/about": {
-      "filePath": "about.tsx"
+    "/sliceria/contact": {
+      "filePath": "sliceria/contact.tsx"
     },
-    "/contact": {
-      "filePath": "contact.tsx"
+    "/sliceria/menu": {
+      "filePath": "sliceria/menu.tsx"
     },
-    "/menu": {
-      "filePath": "menu.tsx"
+    "/sliceria/": {
+      "filePath": "sliceria/index.tsx"
     }
   }
 }

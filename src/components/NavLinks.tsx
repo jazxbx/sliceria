@@ -11,7 +11,11 @@ export default function NavLinks() {
     <nav className=''>
       <ul className='flex flex-col justify-evenly gap-8 md:flex-row items-center'>
         {ROUTES.map((route, i) => (
-          <Link key={i} href={'/' + route.path} className='hover:text-yellow'>
+          <Link
+            key={i}
+            href={'/sliceria/' + route.path}
+            className='hover:text-yellow'
+          >
             {route.name}
           </Link>
         ))}
