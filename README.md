@@ -1,50 +1,29 @@
-# React + TypeScript + Vite
+# Sliceria 🍕
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Sliceria is a static website for a pizzeria business, built with modern web technologies to provide a seamless user experience.
 
-Currently, two official plugins are available:
+Link to project: https://jazxbx.github.io/sliceria/
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+**Tech used:**
 
-## Expanding the ESLint configuration
+React – For building the user interface
+TypeScript – For type safety and maintainability
+Tailwind CSS – For styling and responsive design
+Tanstack Router - For routing
+Firebase – For contact form
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+**Things I learned:**
 
-- Configure the top-level `parserOptions` property like this:
+I realized that Tailwind CSS can get bloated, especially in larger projects. Debugging styles is also much harder even with my own after some time. Next time, I'll create custom classes alongside Tailwind for better maintainability.
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+For deployment and routing, I ran into issues with my base route and had to troubleshoot.I also didn’t consider that GitHub Pages serves the site under user/project-name, which required me to reroute my paths.I did hard code the paths as a quick fix but next time, I'll create an .env file to keep things flexible and avoid manual adjustments.
+
+**Getting Started**
+
+```
+git clone
+cd sliceria
+npm run dev
 ```
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
-
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
-
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+Enjoy your slice of the web with Sliceria! 🍕
