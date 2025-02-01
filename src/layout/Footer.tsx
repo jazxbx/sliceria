@@ -41,8 +41,8 @@ export default function Footer({ restaurant, hours, img }: FooterProps) {
           ))}
         </div>
       </div>
-      <div className='text-yellow text-right text-sm'>
-        created with ❤️ by jazz
+      <div className='text-yellow text-center lg:text-right text-sm mt-10 '>
+        created with ❤️ by <a href='https://github.com/jazxbx/sliceria'>jazz</a>
       </div>
     </div>
   );

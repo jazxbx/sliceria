@@ -47,7 +47,7 @@ export default function Contact() {
         </p>
       )}
       <form
-        className='bg-white w-1/3 h-4/6 p-6 rounded-md md:text-xl flex flex-col gap-5'
+        className='bg-white lg:w-1/3 h-4/6 p-6 rounded-md md:text-xl flex flex-col gap-5'
         onSubmit={handleSubmit(postData)}
       >
         <div>
